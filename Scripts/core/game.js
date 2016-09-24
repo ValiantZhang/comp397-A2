@@ -19,6 +19,12 @@ var node3c3Blk;
 var node3c4;
 var node4c1;
 var node4c2;
+var node4c3;
+var node4c4;
+var node4c5;
+var node4c6;
+var node4c7;
+var node4c8;
 var gameOverScene;
 // Preload Assets required
 var assetData = [
@@ -117,6 +123,36 @@ function changeScene() {
             stage.removeAllChildren();
             currentScene = new scenes.Node4C2();
             console.log("Starting Node 4 Choice 2 scene");
+            break;
+        case config.Scene.NODE4C3:
+            stage.removeAllChildren();
+            currentScene = new scenes.Node4C3();
+            console.log("Starting Node 4 Choice 3 scene");
+            break;
+        case config.Scene.NODE4C4:
+            stage.removeAllChildren();
+            currentScene = new scenes.Node4C4();
+            console.log("Starting Node 4 Choice 4 scene");
+            break;
+        case config.Scene.NODE4C5:
+            stage.removeAllChildren();
+            currentScene = new scenes.Node4C5();
+            console.log("Starting Node 4 Choice 5 scene");
+            break;
+        case config.Scene.NODE4C6:
+            stage.removeAllChildren();
+            currentScene = new scenes.Node4C6();
+            console.log("Starting Node 4 Choice 6 scene");
+            break;
+        case config.Scene.NODE4C7:
+            stage.removeAllChildren();
+            currentScene = new scenes.Node4C7();
+            console.log("Starting Node 4 Choice 7 scene");
+            break;
+        case config.Scene.NODE4C8:
+            stage.removeAllChildren();
+            currentScene = new scenes.Node4C8();
+            console.log("Starting Node 4 Choice 8 scene");
             break;
         case config.Scene.GAMEOVER:
             stage.removeAllChildren();

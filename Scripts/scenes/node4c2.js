@@ -21,7 +21,7 @@ var scenes;
             this._bg = new createjs.Bitmap(assets.getResult("Node1BG"));
             this.addChild(this._bg);
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("Node 4 Choice 1", "60px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._gameLabel = new objects.Label("Node 4 Choice 2", "60px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
             this.addChild(this._gameLabel);
             // Create button for scene and add to Game Scene container. Register for onclick event
             this._node2C1BTN = new objects.Button("Node2C1BTN", config.Screen.CENTER_X - 25, config.Screen.CENTER_Y + 250);

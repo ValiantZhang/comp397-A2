@@ -48,13 +48,13 @@ module scenes {
 
         private _onNode2C1BTN(event : createjs.MouseEvent) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.MENU;
+            scene = config.Scene.NODE4C5;
             changeScene();
         }
         
         private _onNode2C2BTN(event : createjs.MouseEvent) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.MENU;
+            scene = config.Scene.NODE4C6;
             changeScene();
         }
     }

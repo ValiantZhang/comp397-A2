@@ -39,12 +39,12 @@ var scenes;
         };
         Node3C4.prototype._onNode2C1BTN = function (event) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.MENU;
+            scene = config.Scene.NODE4C7;
             changeScene();
         };
         Node3C4.prototype._onNode2C2BTN = function (event) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.MENU;
+            scene = config.Scene.NODE4C8;
             changeScene();
         };
         return Node3C4;
