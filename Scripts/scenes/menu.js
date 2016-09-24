@@ -17,13 +17,12 @@ var scenes;
         }
         Menu.prototype.start = function () {
             console.log("Menu Scene Started");
-            this._menuLabel = new objects.Label("Welcome to Menu Scene", "30px Arial", "#00008B", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            isTriedAirTravel = false;
+            isBorMoney = false;
+            this._menuLabel = new objects.Label("Journery to Canada", "50px Arial", "#00008B", config.Screen.CENTER_X, config.Screen.CENTER_Y - 50);
             this.addChild(this._menuLabel);
-            this._menuButtonGameOver = new objects.Button("GameOver", config.Screen.CENTER_X, config.Screen.CENTER_Y + 50);
-            this.addChild(this._menuButtonGameOver);
-            this._menuButtonGameOver.on("click", this._gameOverButtonClick, this);
             // Add button to scene. Register for click callback function
-            this._menuButton = new objects.Button("Start", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
+            this._menuButton = new objects.Button("StartBTN", config.Screen.CENTER_X - 25, config.Screen.CENTER_Y + 100);
             this.addChild(this._menuButton);
             this._menuButton.on("click", this._startButtonClick, this);
             // Add menu scene to global stage container
@@ -34,7 +33,7 @@ var scenes;
         // Fucntion for when button is pressed
         Menu.prototype._startButtonClick = function (event) {
             // Change global scene variable to GAME. Call global changeScene() function
-            scene = config.Scene.GAME;
+            scene = config.Scene.NODE1;
             changeScene();
         };
         Menu.prototype._gameOverButtonClick = function (event) {
