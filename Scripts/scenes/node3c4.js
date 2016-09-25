@@ -17,18 +17,20 @@ var scenes;
         // PUBLIC FUNCTIONS
         Node3C4.prototype.start = function () {
             // Add objects to the scene
-            console.log("Node 2 choice 1 Loaded");
-            this._bg = new createjs.Bitmap(assets.getResult("Node1BG"));
+            console.log("Node 3 choice 4 Loaded");
+            this._bg = new createjs.Bitmap(assets.getResult("Node3C4BG"));
             this.addChild(this._bg);
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("Node 3 Choice 4", "60px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._gameLabel = new objects.Label("Your second son managed to find cheap, affordable ship to transport him to Canada. It will be a long trip, but maybe your second son can meet a nice girl on the way. Sirens are heard outside the cabin, the boat is being detained for transporting some illegal immigrants. Quickly, should your second son hide from or bribe the authorities?", "25px Consolar", "#000000", config.Screen.CENTER_X * 3.4, config.Screen.CENTER_Y * 1.2);
+            this._gameLabel.lineWidth = 900;
+            this._gameLabel.lineHeight = 30;
             this.addChild(this._gameLabel);
             // Create button for scene and add to Game Scene container. Register for onclick event
-            this._node2C1BTN = new objects.Button("Node2C1BTN", config.Screen.CENTER_X - 250, config.Screen.CENTER_Y + 250);
+            this._node2C1BTN = new objects.Button("HideBTN", config.Screen.CENTER_X - 250, config.Screen.CENTER_Y + 250);
             this.addChild(this._node2C1BTN);
             this._node2C1BTN.on("click", this._onNode2C1BTN, this);
             // Create button for scene and add to Game Scene container. Register for onclick event
-            this._node2C2BTN = new objects.Button("Node2C2BTN", config.Screen.CENTER_X + 200, config.Screen.CENTER_Y + 250);
+            this._node2C2BTN = new objects.Button("BribeBTN", config.Screen.CENTER_X + 200, config.Screen.CENTER_Y + 250);
             this.addChild(this._node2C2BTN);
             this._node2C2BTN.on("click", this._onNode2C2BTN, this);
             // Add gamescene to main stage container. 

@@ -18,17 +18,20 @@ module scenes {
         // PUBLIC FUNCTIONS
         public start() : void {
             // Add objects to the scene
-            console.log("Node 2 choice 1 Loaded");
+            console.log("Node 4 choice 8 Loaded");
             
-            this._bg = new createjs.Bitmap(assets.getResult("Node1BG"));
+            this._bg = new createjs.Bitmap(assets.getResult("Node4C8BG"));
             this.addChild(this._bg);
 
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("Node 4 Choice 8", "60px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._gameLabel = new objects.Label("The authorities scoff at your second son's petty bribe, but they were unprepared for the sweetness of his chocolates! Huzzah! Your second son will not be arrested, and has got himself an escort back home to you; although, he will be unable to go to Canada.",
+                "25px Consolar", "#000000", config.Screen.CENTER_X * 2.65, config.Screen.CENTER_Y * 1.2);
+            this._gameLabel.lineWidth = 900;
+            this._gameLabel.lineHeight = 30;
             this.addChild(this._gameLabel);
 
             // Create button for scene and add to Game Scene container. Register for onclick event
-            this._node2C1BTN = new objects.Button("Node2C1BTN", config.Screen.CENTER_X - 25, config.Screen.CENTER_Y + 250);
+            this._node2C1BTN = new objects.Button("ReplayBTN", config.Screen.CENTER_X - 25, config.Screen.CENTER_Y + 250);
             this.addChild(this._node2C1BTN);
             this._node2C1BTN.on("click", this._onNode2C1BTN, this);
 

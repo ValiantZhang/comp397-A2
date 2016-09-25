@@ -47,17 +47,35 @@ var assetData:objects.Asset[] = [
     
     {id: "Node3C1BG", src:"../../Assets/images//backgrounds/node3c1BG.jpg"},
     {id: "Node3C2BG", src:"../../Assets/images//backgrounds/node3c2BG.jpg"},
+    {id: "Node3C3BG", src:"../../Assets/images//backgrounds/node3c3BG.jpg"},
+    {id: "Node3C3BlkBG", src:"../../Assets/images//backgrounds/node3c3BlkBG.jpg"},
+    {id: "Node3C4BG", src:"../../Assets/images//backgrounds/node3c4BG.jpg"},
+    
+    {id: "Node4C1BG", src:"../../Assets/images//backgrounds/node4c1BG.jpg"},
+    {id: "Node4C2BG", src:"../../Assets/images//backgrounds/node4c2BG.jpg"},
+    {id: "Node4C3BG", src:"../../Assets/images//backgrounds/node4c3BG.jpg"},
+    {id: "Node4C4BG", src:"../../Assets/images//backgrounds/node4c4BG.jpg"},
+    {id: "Node4C5BG", src:"../../Assets/images//backgrounds/node4c5BG.jpg"},
+    {id: "Node4C6BG", src:"../../Assets/images//backgrounds/node4c6BG.jpg"},
+    {id: "Node4C7BG", src:"../../Assets/images//backgrounds/node4c7BG.jpg"},
+    {id: "Node4C8BG", src:"../../Assets/images//backgrounds/node4c8BG.jpg"},
     
     {id: "Node2C1BTN", src:"../../Assets/images/buttons/node2C1BTN.png"},
     {id: "Node2C2BTN", src:"../../Assets/images/buttons/node2C2BTN.png"},
     {id: "AirBTN", src:"../../Assets/images/buttons/AirBTN.png"},
     {id: "SeaBTN", src:"../../Assets/images/buttons/SeaBTN.png"},
     {id: "BorrowBTN", src:"../../Assets/images/buttons/BorrowBTN.png"},
+    {id: "BackBTN", src:"../../Assets/images/buttons/BackBTN.png"},
+    {id: "GiveUpBTN", src:"../../Assets/images/buttons/GiveUpBTN.png"},
     {id: "FillBTN", src:"../../Assets/images/buttons/FillBTN.png"},
     {id: "NoFillBTN", src:"../../Assets/images/buttons/NoFillBTN.png"},
     {id: "JumpBTN", src:"../../Assets/images/buttons/JumpBTN.png"},
     {id: "BribeBTN", src:"../../Assets/images/buttons/BribeBTN.png"},
-    {id: "OtherBTN", src:"../../Assets/images/buttons/OtherBTN.png"}
+    {id: "HideBTN", src:"../../Assets/images/buttons/HideBTN.png"},
+    {id: "OtherBTN", src:"../../Assets/images/buttons/OtherBTN.png"},
+    {id: "ReplayBTN", src:"../../Assets/images/buttons/ReplayBTN.png"},
+    
+    {id: "Son1IMG", src:"../../Assets/images/son1Img.png"}
 ];
 
 function preload() {
