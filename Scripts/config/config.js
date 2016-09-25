@@ -23,7 +23,6 @@ var config;
         Scene.NODE4C6 = 14;
         Scene.NODE4C7 = 15;
         Scene.NODE4C8 = 16;
-        Scene.GAMEOVER = 50;
         return Scene;
     }());
     config.Scene = Scene;

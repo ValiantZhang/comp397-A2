@@ -23,8 +23,6 @@ module config {
         public static NODE4C7 : number = 15;
         public static NODE4C8 : number = 16;
         
-        
-        public static GAMEOVER : number = 50;
     }
 
     export class Screen {

@@ -19,7 +19,9 @@ var scenes;
             console.log("Menu Scene Started");
             isTriedAirTravel = false;
             isBorMoney = false;
-            this._menuLabel = new objects.Label("Journery to Canada", "50px Arial", "#00008B", config.Screen.CENTER_X, config.Screen.CENTER_Y - 50);
+            this._bg = new createjs.Bitmap(assets.getResult("menuBG"));
+            this.addChild(this._bg);
+            this._menuLabel = new objects.Label("Journey to Canada", "50px Arial", "#00008B", config.Screen.CENTER_X, config.Screen.CENTER_Y - 100);
             this.addChild(this._menuLabel);
             // Add button to scene. Register for click callback function
             this._menuButton = new objects.Button("StartBTN", config.Screen.CENTER_X - 25, config.Screen.CENTER_Y + 100);
@@ -34,10 +36,6 @@ var scenes;
         Menu.prototype._startButtonClick = function (event) {
             // Change global scene variable to GAME. Call global changeScene() function
             scene = config.Scene.NODE1;
-            changeScene();
-        };
-        Menu.prototype._gameOverButtonClick = function (event) {
-            scene = config.Scene.GAMEOVER;
             changeScene();
         };
         return Menu;

@@ -33,19 +33,30 @@ var node4c6 : scenes.Node4C6;
 var node4c7 : scenes.Node4C7;
 var node4c8 : scenes.Node4C8;
 
-var gameOverScene : scenes.GameOver;
-
 // Preload Assets required
 var assetData:objects.Asset[] = [
     {id: "StartBTN", src:"../../Assets/images/buttons/startBTN.png"}, 
     {id: "Back", src:"../../Assets/images/Back.png"},
-    {id: "GameOver", src:"../../Assets/images/GameOver.png"}, 
+    
+    {id: "menuBG", src:"../../Assets/images/backgrounds/menuBG.jpg"},
     {id: "BG", src:"../../Assets/images/BG.jpg"},
     
     {id: "Node1BG", src:"../../Assets/images//backgrounds/node1BG.jpg"},
+    {id: "Node2C1BG", src:"../../Assets/images//backgrounds/node2c1BG.jpg"},
+    {id: "Node2C2BG", src:"../../Assets/images//backgrounds/node2c2BG.jpg"},
+    
+    {id: "Node3C1BG", src:"../../Assets/images//backgrounds/node3c1BG.jpg"},
+    {id: "Node3C2BG", src:"../../Assets/images//backgrounds/node3c2BG.jpg"},
+    
     {id: "Node2C1BTN", src:"../../Assets/images/buttons/node2C1BTN.png"},
     {id: "Node2C2BTN", src:"../../Assets/images/buttons/node2C2BTN.png"},
-    
+    {id: "AirBTN", src:"../../Assets/images/buttons/AirBTN.png"},
+    {id: "SeaBTN", src:"../../Assets/images/buttons/SeaBTN.png"},
+    {id: "BorrowBTN", src:"../../Assets/images/buttons/BorrowBTN.png"},
+    {id: "FillBTN", src:"../../Assets/images/buttons/FillBTN.png"},
+    {id: "NoFillBTN", src:"../../Assets/images/buttons/NoFillBTN.png"},
+    {id: "JumpBTN", src:"../../Assets/images/buttons/JumpBTN.png"},
+    {id: "BribeBTN", src:"../../Assets/images/buttons/BribeBTN.png"},
     {id: "OtherBTN", src:"../../Assets/images/buttons/OtherBTN.png"}
 ];
 
@@ -179,12 +190,6 @@ function changeScene() : void {
             stage.removeAllChildren();
             currentScene = new scenes.Node4C8();
             console.log("Starting Node 4 Choice 8 scene");
-            break;
-            
-        case config.Scene.GAMEOVER :
-            stage.removeAllChildren();
-            currentScene = new scenes.GameOver();
-            console.log("Starting GAME OVER scene");
             break;
     }
     

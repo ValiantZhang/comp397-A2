@@ -11,6 +11,7 @@ module scenes {
         // Button 
         private _menuButton : objects.Button;
         private _menuLabel : objects.Label;
+        private _bg: createjs.Bitmap;
 
         // Menu Class Contructor
         constructor()
@@ -24,7 +25,10 @@ module scenes {
             isTriedAirTravel = false;
             isBorMoney = false;
             
-            this._menuLabel = new objects.Label("Journery to Canada", "50px Arial", "#00008B", config.Screen.CENTER_X, config.Screen.CENTER_Y - 50);
+            this._bg = new createjs.Bitmap(assets.getResult("menuBG"));
+            this.addChild(this._bg);
+            
+            this._menuLabel = new objects.Label("Journey to Canada", "50px Arial", "#00008B", config.Screen.CENTER_X, config.Screen.CENTER_Y - 100);
             this.addChild(this._menuLabel);
 
             // Add button to scene. Register for click callback function
@@ -47,9 +51,5 @@ module scenes {
             changeScene();
         }
         
-        private _gameOverButtonClick(event : createjs.MouseEvent){
-            scene = config.Scene.GAMEOVER;
-            changeScene();
-        }
     }
 }

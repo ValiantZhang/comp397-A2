@@ -23,9 +23,12 @@ module scenes {
             
             this._bg = new createjs.Bitmap(assets.getResult("Node1BG"));
             this.addChild(this._bg);
-
-            // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("Node 1", "60px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            
+                        // Create Label for scene and add to Game Scene container
+            this._gameLabel = new objects.Label("You are a proud mother of two sons, but they are ungrateful and want to have a better life elsewhere! You hear of a wonderful place called CANADA and decide to send one of your beloved sons there. You can only send one, who will it be?",
+                "25px Consolar", "#000000", config.Screen.CENTER_X * 2.5, config.Screen.CENTER_Y * 1.2);
+            this._gameLabel.lineWidth = 900;
+            this._gameLabel.lineHeight = 30;
             this.addChild(this._gameLabel);
 
             // Create button for scene and add to Game Scene container. Register for onclick event

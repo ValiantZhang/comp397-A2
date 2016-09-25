@@ -27,5 +27,3 @@
 /// <reference path="../scenes/node4c6.ts" />
 /// <reference path="../scenes/node4c7.ts" />
 /// <reference path="../scenes/node4c8.ts" />
-
-/// <reference path="../scenes/gameover.ts" />
