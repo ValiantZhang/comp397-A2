@@ -61,12 +61,13 @@ var assetData = [
     { id: "HideBTN", src: "../../Assets/images/buttons/HideBTN.png" },
     { id: "OtherBTN", src: "../../Assets/images/buttons/OtherBTN.png" },
     { id: "ReplayBTN", src: "../../Assets/images/buttons/ReplayBTN.png" },
-    { id: "Son1IMG", src: "../../Assets/images/son1Img.png" }
+    { id: "Son1IMG", src: "../../Assets/images/son1Img.png" },
+    { id: "themeSound", src: "../../Assets/music/oCanada.ogg" }
 ];
 function preload() {
     // Create a queue for assets being loaded
     assets = new createjs.LoadQueue(false);
-    // assets.installPlugin(createjs.Sound);
+    //assets.installPlugin(createjs.Sound);
     // Register callback function to be run when assets complete loading.
     assets.on("complete", init, this);
     assets.loadManifest(assetData);

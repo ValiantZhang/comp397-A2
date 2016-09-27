@@ -17,6 +17,7 @@ var scenes;
         }
         Menu.prototype.start = function () {
             console.log("Menu Scene Started");
+            createjs.Sound.play("themeSound", { loop: 99 });
             isTriedAirTravel = false;
             isBorMoney = false;
             this._bg = new createjs.Bitmap(assets.getResult("menuBG"));

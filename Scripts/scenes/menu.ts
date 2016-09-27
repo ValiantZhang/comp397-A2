@@ -21,6 +21,7 @@ module scenes {
 
         public start() : void {
             console.log("Menu Scene Started");
+            createjs.Sound.play("themeSound",{loop: 99});
             
             isTriedAirTravel = false;
             isBorMoney = false;
