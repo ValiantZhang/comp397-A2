@@ -36,10 +36,8 @@ var node4c8 : scenes.Node4C8;
 // Preload Assets required
 var assetData:objects.Asset[] = [
     {id: "StartBTN", src:"../../Assets/images/buttons/startBTN.png"}, 
-    {id: "Back", src:"../../Assets/images/Back.png"},
     
     {id: "menuBG", src:"../../Assets/images/backgrounds/menuBG.jpg"},
-    {id: "BG", src:"../../Assets/images/BG.jpg"},
     
     {id: "Node1BG", src:"../../Assets/images//backgrounds/node1BG.jpg"},
     {id: "Node2C1BG", src:"../../Assets/images//backgrounds/node2c1BG.jpg"},
