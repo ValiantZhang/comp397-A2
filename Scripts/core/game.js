@@ -59,6 +59,7 @@ var assetData = [
     { id: "HideBTN", src: "../../Assets/images/buttons/HideBTN.png" },
     { id: "OtherBTN", src: "../../Assets/images/buttons/OtherBTN.png" },
     { id: "ReplayBTN", src: "../../Assets/images/buttons/ReplayBTN.png" },
+    { id: "MusicBTN", src: "../../Assets/images/buttons/musicBTN.png" },
     { id: "Son1IMG", src: "../../Assets/images/son1Img.png" },
     { id: "themeSound", src: "../../Assets/music/oCanada.mp3" }
 ];

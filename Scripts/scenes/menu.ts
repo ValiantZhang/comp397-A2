@@ -12,6 +12,8 @@ module scenes {
         private _menuButton : objects.Button;
         private _menuLabel : objects.Label;
         private _bg: createjs.Bitmap;
+        private _musicButton : objects.Button;
+        private _isMusicPlaying : boolean;
 
         // Menu Class Contructor
         constructor()
@@ -21,7 +23,6 @@ module scenes {
 
         public start() : void {
             console.log("Menu Scene Started");
-            createjs.Sound.play("themeSound",{loop: 99});
             
             isTriedAirTravel = false;
             isBorMoney = false;
@@ -36,6 +37,10 @@ module scenes {
             this._menuButton = new objects.Button("StartBTN", config.Screen.CENTER_X - 25, config.Screen.CENTER_Y + 100);
             this.addChild(this._menuButton);
             this._menuButton.on("click", this._startButtonClick, this);
+            
+            this._musicButton = new objects.Button("MusicBTN", config.Screen.CENTER_X + 450, config.Screen.CENTER_Y - 350);
+            this.addChild(this._musicButton);
+            this._musicButton.on("click", this._musicButtonClick, this);
 
             // Add menu scene to global stage container
             stage.addChild(this);
@@ -50,6 +55,17 @@ module scenes {
             // Change global scene variable to GAME. Call global changeScene() function
             scene = config.Scene.NODE1;
             changeScene();
+        }
+        
+        private _musicButtonClick(event : createjs.MouseEvent) {
+            if (this._isMusicPlaying){
+                createjs.Sound.stop();
+                this._isMusicPlaying = false;
+            }
+            else{
+                createjs.Sound.play("themeSound",{loop: 99});
+                this._isMusicPlaying = true;
+            }
         }
         
     }

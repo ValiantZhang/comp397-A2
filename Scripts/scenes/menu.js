@@ -17,7 +17,6 @@ var scenes;
         }
         Menu.prototype.start = function () {
             console.log("Menu Scene Started");
-            createjs.Sound.play("themeSound", { loop: 99 });
             isTriedAirTravel = false;
             isBorMoney = false;
             this._bg = new createjs.Bitmap(assets.getResult("menuBG"));
@@ -28,6 +27,9 @@ var scenes;
             this._menuButton = new objects.Button("StartBTN", config.Screen.CENTER_X - 25, config.Screen.CENTER_Y + 100);
             this.addChild(this._menuButton);
             this._menuButton.on("click", this._startButtonClick, this);
+            this._musicButton = new objects.Button("MusicBTN", config.Screen.CENTER_X + 450, config.Screen.CENTER_Y - 350);
+            this.addChild(this._musicButton);
+            this._musicButton.on("click", this._musicButtonClick, this);
             // Add menu scene to global stage container
             stage.addChild(this);
         };
@@ -38,6 +40,16 @@ var scenes;
             // Change global scene variable to GAME. Call global changeScene() function
             scene = config.Scene.NODE1;
             changeScene();
+        };
+        Menu.prototype._musicButtonClick = function (event) {
+            if (this._isMusicPlaying) {
+                createjs.Sound.stop();
+                this._isMusicPlaying = false;
+            }
+            else {
+                createjs.Sound.play("themeSound", { loop: 99 });
+                this._isMusicPlaying = true;
+            }
         };
         return Menu;
     }(objects.Scene));
