@@ -17,8 +17,6 @@ var scenes;
         }
         Menu.prototype.start = function () {
             console.log("Menu Scene Started");
-            isTriedAirTravel = false;
-            isBorMoney = false;
             this._bg = new createjs.Bitmap(assets.getResult("menuBG"));
             this.addChild(this._bg);
             this._menuLabel = new objects.Label("Journey to Canada", "50px Arial", "#00008B", config.Screen.CENTER_X, config.Screen.CENTER_Y - 100);
@@ -38,7 +36,7 @@ var scenes;
         // Fucntion for when button is pressed
         Menu.prototype._startButtonClick = function (event) {
             // Change global scene variable to GAME. Call global changeScene() function
-            scene = config.Scene.NODE1;
+            scene = config.Scene.MAINGAME;
             changeScene();
         };
         Menu.prototype._musicButtonClick = function (event) {

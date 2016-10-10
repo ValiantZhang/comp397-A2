@@ -24,9 +24,6 @@ module scenes {
         public start() : void {
             console.log("Menu Scene Started");
             
-            isTriedAirTravel = false;
-            isBorMoney = false;
-            
             this._bg = new createjs.Bitmap(assets.getResult("menuBG"));
             this.addChild(this._bg);
             
@@ -53,7 +50,7 @@ module scenes {
         // Fucntion for when button is pressed
         private _startButtonClick(event : createjs.MouseEvent) {
             // Change global scene variable to GAME. Call global changeScene() function
-            scene = config.Scene.NODE1;
+            scene = config.Scene.MAINGAME;
             changeScene();
         }
         

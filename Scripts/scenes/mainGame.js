@@ -9,13 +9,13 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var scenes;
 (function (scenes) {
-    var Node1 = (function (_super) {
-        __extends(Node1, _super);
-        function Node1() {
+    var MainGame = (function (_super) {
+        __extends(MainGame, _super);
+        function MainGame() {
             _super.call(this);
         }
         // PUBLIC FUNCTIONS
-        Node1.prototype.start = function () {
+        MainGame.prototype.start = function () {
             // Add objects to the scene
             console.log("Node 1 Loaded");
             this._bg = new createjs.Bitmap(assets.getResult("Node1BG"));
@@ -36,21 +36,21 @@ var scenes;
             // Add gamescene to main stage container. 
             stage.addChild(this);
         };
-        Node1.prototype.update = function () {
+        MainGame.prototype.update = function () {
             // Update objects
         };
-        Node1.prototype._onNode2C1BTN = function (event) {
+        MainGame.prototype._onNode2C1BTN = function (event) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.NODE2C1;
+            //scene = config.Scene.NODE2C1;
             changeScene();
         };
-        Node1.prototype._onNode2C2BTN = function (event) {
+        MainGame.prototype._onNode2C2BTN = function (event) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.NODE2C2;
+            //scene = config.Scene.NODE2C2;
             changeScene();
         };
-        return Node1;
+        return MainGame;
     }(objects.Scene));
-    scenes.Node1 = Node1;
+    scenes.MainGame = MainGame;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=node1.js.map
+//# sourceMappingURL=mainGame.js.map

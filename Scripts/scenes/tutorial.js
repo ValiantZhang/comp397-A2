@@ -9,19 +9,19 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var scenes;
 (function (scenes) {
-    var Node2C2 = (function (_super) {
-        __extends(Node2C2, _super);
-        function Node2C2() {
+    var Tutorial = (function (_super) {
+        __extends(Tutorial, _super);
+        function Tutorial() {
             _super.call(this);
         }
         // PUBLIC FUNCTIONS
-        Node2C2.prototype.start = function () {
+        Tutorial.prototype.start = function () {
             // Add objects to the scene
-            console.log("Node 2 choice 2 Loaded");
-            this._bg = new createjs.Bitmap(assets.getResult("Node2C2BG"));
+            console.log("Node 2 choice 1 Loaded");
+            this._bg = new createjs.Bitmap(assets.getResult("Node2C1BG"));
             this.addChild(this._bg);
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("This is your second son. He recently finished school, and is not providing you with grandchildren anytime soon. Second son has little money, but always has chocolate when he travels. Should he travel by air or sea?", "25px Consolar", "#000000", config.Screen.CENTER_X * 2.2, config.Screen.CENTER_Y * 1.2);
+            this._gameLabel = new objects.Label("This is your first son. He's married to an acceptable daughter in law, but has given you no grandchildren yet. First son is employed and has a lot of money saved up. Should he travel by air or sea?", "25px Consolar", "#000000", config.Screen.CENTER_X * 2, config.Screen.CENTER_Y * 1.2);
             this._gameLabel.lineWidth = 900;
             this._gameLabel.lineHeight = 30;
             this.addChild(this._gameLabel);
@@ -37,35 +37,39 @@ var scenes;
             this._otherBTN = new objects.Button("OtherBTN", config.Screen.CENTER_X - 25, config.Screen.CENTER_Y + 250);
             this.addChild(this._otherBTN);
             this._otherBTN.on("click", this._onOtherBTN, this);
+            // if (isTriedAirTravel == true){
+            //     this._moneyBTN = new objects.Button("BorrowBTN", config.Screen.CENTER_X + 300, config.Screen.CENTER_Y - 150);
+            //     this.addChild(this._moneyBTN);
+            //     this._moneyBTN.on("click", this._onMoneyBTN, this);
+            // }
             // Add gamescene to main stage container. 
             stage.addChild(this);
         };
-        Node2C2.prototype.update = function () {
+        Tutorial.prototype.update = function () {
             // Update objects
         };
-        Node2C2.prototype._onNode2C1BTN = function (event) {
+        Tutorial.prototype._onNode2C1BTN = function (event) {
             // Set global variable to Menu Scene and call changescene function
-            if (isBorMoney == true) {
-                scene = config.Scene.NODE3C3;
-                changeScene();
-            }
-            else {
-                scene = config.Scene.NODE3C3BLK;
-                changeScene();
-            }
-        };
-        Node2C2.prototype._onNode2C2BTN = function (event) {
-            // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.NODE3C4;
+            //scene = config.Scene.NODE3C1;
             changeScene();
         };
-        Node2C2.prototype._onOtherBTN = function (event) {
+        Tutorial.prototype._onNode2C2BTN = function (event) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.NODE2C1;
+            //scene = config.Scene.NODE3C2;
             changeScene();
         };
-        return Node2C2;
+        Tutorial.prototype._onOtherBTN = function (event) {
+            // Set global variable to Menu Scene and call changescene function
+            //scene = config.Scene.NODE2C2;
+            changeScene();
+        };
+        Tutorial.prototype._onMoneyBTN = function (event) {
+            // Set global variable to Menu Scene and call changescene function
+            alert("You Borrowed Money!");
+            //isBorMoney = true;
+        };
+        return Tutorial;
     }(objects.Scene));
-    scenes.Node2C2 = Node2C2;
+    scenes.Tutorial = Tutorial;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=node2c2.js.map
+//# sourceMappingURL=tutorial.js.map

@@ -4,7 +4,7 @@
 */
 
 module scenes {
-    export class Node2C1 extends objects.Scene {
+    export class Tutorial extends objects.Scene {
 
         // PRIVATE VARIABLES
         private _gameLabel : objects.Label;
@@ -48,11 +48,11 @@ module scenes {
             this.addChild(this._otherBTN);
             this._otherBTN.on("click", this._onOtherBTN, this);
             
-            if (isTriedAirTravel == true){
-                this._moneyBTN = new objects.Button("BorrowBTN", config.Screen.CENTER_X + 300, config.Screen.CENTER_Y - 150);
-                this.addChild(this._moneyBTN);
-                this._moneyBTN.on("click", this._onMoneyBTN, this);
-            }
+            // if (isTriedAirTravel == true){
+            //     this._moneyBTN = new objects.Button("BorrowBTN", config.Screen.CENTER_X + 300, config.Screen.CENTER_Y - 150);
+            //     this.addChild(this._moneyBTN);
+            //     this._moneyBTN.on("click", this._onMoneyBTN, this);
+            // }
 
             // Add gamescene to main stage container. 
             stage.addChild(this);
@@ -64,26 +64,26 @@ module scenes {
 
         private _onNode2C1BTN(event : createjs.MouseEvent) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.NODE3C1;
+            //scene = config.Scene.NODE3C1;
             changeScene();
         }
         
         private _onNode2C2BTN(event : createjs.MouseEvent) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.NODE3C2;
+            //scene = config.Scene.NODE3C2;
             changeScene();
         }
         
         private _onOtherBTN(event : createjs.MouseEvent) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.NODE2C2;
+            //scene = config.Scene.NODE2C2;
             changeScene();
         }
         
         private _onMoneyBTN(event : createjs.MouseEvent) {
             // Set global variable to Menu Scene and call changescene function
             alert("You Borrowed Money!");
-            isBorMoney = true;
+            //isBorMoney = true;
         }
     }
 }

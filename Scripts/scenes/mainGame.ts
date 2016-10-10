@@ -4,7 +4,7 @@
 */
 
 module scenes {
-    export class Node1 extends objects.Scene {
+    export class MainGame extends objects.Scene {
 
         // PRIVATE VARIABLES
         private _gameLabel : objects.Label;
@@ -51,13 +51,13 @@ module scenes {
 
         private _onNode2C1BTN(event : createjs.MouseEvent) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.NODE2C1;
+            //scene = config.Scene.NODE2C1;
             changeScene();
         }
         
         private _onNode2C2BTN(event : createjs.MouseEvent) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.NODE2C2;
+            //scene = config.Scene.NODE2C2;
             changeScene();
         }
     }
