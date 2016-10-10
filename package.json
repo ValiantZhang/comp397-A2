@@ -1,19 +1,19 @@
 {
-  "name": "workspace",
+  "name": "comp397-a2",
   "version": "1.0.0",
-  "description": "Buttons",
+  "description": "Simple UI game",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ValiantZhang/COMP397-Lab2.git"
+    "url": "git+https://github.com/ValiantZhang/comp397-a2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ValiantZhang/COMP397-Lab2/issues"
+    "url": "https://github.com/ValiantZhang/comp397-a2.git#issues"
   },
-  "homepage": "https://github.com/ValiantZhang/COMP397-Lab2#readme"
+  "homepage": "https://github.com/ValiantZhang/comp397-a2.git#readme"
 }
