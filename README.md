@@ -1,2 +1,2 @@
-# COMP397-Lab2
-Repurposed for Assignment 1 
+# COMP397-Assignment 2
+Pulled from assignment 1 for use as assignment 2 template
