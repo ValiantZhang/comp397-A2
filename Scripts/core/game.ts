@@ -16,9 +16,11 @@ var tutorial : scenes.Tutorial;
 
 // Preload Assets required
 var assetData:objects.Asset[] = [
-    {id: "StartBTN", src:"../../Assets/images/buttons/startBTN.png"}, 
+    {id: "PlayBTN", src:"../../Assets/images/buttons/PlayBTN.png"},
+    {id: "TutBTN", src:"../../Assets/images/buttons/TutBTN.png"},
+    {id: "BackBTN", src:"../../Assets/images/buttons/BackBTN.png"}, 
     
-    {id: "menuBG", src:"../../Assets/images/backgrounds/menuBG.jpg"},
+    {id: "menuBG", src:"../../Assets/images/backgrounds/menuBG.png"},
     
     { id: "themeSound", src: "../../Assets/music/oCanada.mp3" }  
 ];

@@ -19,12 +19,15 @@ var scenes;
             console.log("Menu Scene Started");
             this._bg = new createjs.Bitmap(assets.getResult("menuBG"));
             this.addChild(this._bg);
-            this._menuLabel = new objects.Label("Journey to Canada", "50px Arial", "#00008B", config.Screen.CENTER_X, config.Screen.CENTER_Y - 100);
+            this._menuLabel = new objects.Label("Pie Baron", "70px Impact", "#00008B", config.Screen.CENTER_X, config.Screen.CENTER_Y - 150);
             this.addChild(this._menuLabel);
             // Add button to scene. Register for click callback function
-            this._menuButton = new objects.Button("StartBTN", config.Screen.CENTER_X - 25, config.Screen.CENTER_Y + 100);
-            this.addChild(this._menuButton);
-            this._menuButton.on("click", this._startButtonClick, this);
+            this._playButton = new objects.Button("PlayBTN", config.Screen.CENTER_X - 190, config.Screen.CENTER_Y - 100);
+            this.addChild(this._playButton);
+            this._playButton.on("click", this._playButtonClick, this);
+            this._tutButton = new objects.Button("TutBTN", config.Screen.CENTER_X - 190, config.Screen.CENTER_Y + 25);
+            this.addChild(this._tutButton);
+            this._tutButton.on("click", this._tutButtonClick, this);
             this._musicButton = new objects.Button("MusicBTN", config.Screen.CENTER_X + 450, config.Screen.CENTER_Y - 350);
             this.addChild(this._musicButton);
             this._musicButton.on("click", this._musicButtonClick, this);
@@ -34,9 +37,14 @@ var scenes;
         Menu.prototype.update = function () {
         };
         // Fucntion for when button is pressed
-        Menu.prototype._startButtonClick = function (event) {
+        Menu.prototype._playButtonClick = function (event) {
             // Change global scene variable to GAME. Call global changeScene() function
             scene = config.Scene.MAINGAME;
+            changeScene();
+        };
+        Menu.prototype._tutButtonClick = function (event) {
+            // Change global scene variable to GAME. Call global changeScene() function
+            scene = config.Scene.TUTORIAL;
             changeScene();
         };
         Menu.prototype._musicButtonClick = function (event) {

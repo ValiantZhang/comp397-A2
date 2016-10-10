@@ -11,8 +11,10 @@ var mainGame;
 var tutorial;
 // Preload Assets required
 var assetData = [
-    { id: "StartBTN", src: "../../Assets/images/buttons/startBTN.png" },
-    { id: "menuBG", src: "../../Assets/images/backgrounds/menuBG.jpg" },
+    { id: "PlayBTN", src: "../../Assets/images/buttons/PlayBTN.png" },
+    { id: "TutBTN", src: "../../Assets/images/buttons/TutBTN.png" },
+    { id: "BackBTN", src: "../../Assets/images/buttons/BackBTN.png" },
+    { id: "menuBG", src: "../../Assets/images/backgrounds/menuBG.png" },
     { id: "themeSound", src: "../../Assets/music/oCanada.mp3" }
 ];
 function preload() {
