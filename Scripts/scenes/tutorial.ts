@@ -11,6 +11,9 @@ module scenes {
         private _backBTN : objects.Button;
         private _bg: createjs.Bitmap;
         private _circle : createjs.Shape;
+        private _bird : objects.Bird;
+        private _pie : objects.Pie;
+        private _healthBar : createjs.Shape;
 
         constructor() {
             super();
@@ -21,28 +24,22 @@ module scenes {
             // Add objects to the scene
             console.log("Tutorial Loaded");
             
-            this._bg = new createjs.Bitmap(assets.getResult("Node2C1BG"));
+            this._bg = new createjs.Bitmap(assets.getResult("tutBG"));
             this.addChild(this._bg);
+            
+            this._addAssets();
 
             // Create Label for scene and add to Game Scene container
             this._gameLabel = new objects.Label("Tutorial",
-                "25px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+                "70px Impact", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y + 250);
             this._gameLabel.lineWidth = 900;
             this._gameLabel.lineHeight = 30;
             this.addChild(this._gameLabel);
             
             // Create button for scene and add to Game Scene container. Register for onclick event
-            this._backBTN = new objects.Button("BackBTN", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._backBTN = new objects.Button("BackBTN", config.Screen.CENTER_X + 180, config.Screen.CENTER_Y + 150);
             this.addChild(this._backBTN);
             this._backBTN.on("click", this._onBackBTN, this);
-            
-            this.addShape();
-            
-            // if (isTriedAirTravel == true){
-            //     this._moneyBTN = new objects.Button("BorrowBTN", config.Screen.CENTER_X + 300, config.Screen.CENTER_Y - 150);
-            //     this.addChild(this._moneyBTN);
-            //     this._moneyBTN.on("click", this._onMoneyBTN, this);
-            // }
 
             // Add gamescene to main stage container. 
             stage.addChild(this);
@@ -50,6 +47,7 @@ module scenes {
 
         public update() : void {
             // Update objects
+            this._bird.update();
         }
         
         private _onBackBTN(event : createjs.MouseEvent) {
@@ -58,23 +56,22 @@ module scenes {
             changeScene();
         }
         
-        private _onMoneyBTN(event : createjs.MouseEvent) {
-            // Set global variable to Menu Scene and call changescene function
-            alert("You Borrowed Money!");
-            //isBorMoney = true;
-        }
-        
-        private addShape(){
-        this._circle = new createjs.Shape;
-        this._circle.graphics.beginFill(" #e9ff33  ").drawCircle(0, 0, 100);
-        this._circle.x = config.Screen.CENTER_X;
-        this._circle.y = config.Screen.CENTER_Y;
-        stage.addChild(this._circle);
-        this._circle.on("mouseover", this.changeTrans, this);
-    }
     
-    private changeTrans(){
-        this._circle.alpha = 0.5;
+    private _addAssets(){
+        this._pie = new objects.Pie("Pie", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+        this._pie.name = "pie";
+        this.addChild(this._pie);
+        
+        this._bird = new objects.Bird("bird", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 120, 0);
+        this.addChild(this._bird);
+        
+        this._healthBar = new createjs.Shape;
+        this._healthBar.graphics.beginFill(" #ff0000  ").drawRect(30,0,70,350);
+        this._healthBar.x = config.Screen.CENTER_X + 435;
+        this._healthBar.y = config.Screen.CENTER_Y + 100;
+        this._healthBar.rotation += 180;
+        this.addChild(this._healthBar);
     }
+
     }
 }

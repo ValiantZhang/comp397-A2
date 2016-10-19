@@ -8,19 +8,30 @@ var stage: createjs.Stage;
 var currentScene : objects.Scene;
 var scene: number;
 
+var spriteSheetLoader : createjs.SpriteSheetLoader;
+var bird : createjs.SpriteSheet;
+
 // Game scenes
 var menuScene : scenes.Menu;
 
 var mainGame : scenes.MainGame;
 var tutorial : scenes.Tutorial;
 
+var highScore : number;
+var score : number;
+
 // Preload Assets required
 var assetData:objects.Asset[] = [
     {id: "PlayBTN", src:"../../Assets/images/buttons/PlayBTN.png"},
     {id: "TutBTN", src:"../../Assets/images/buttons/TutBTN.png"},
-    {id: "BackBTN", src:"../../Assets/images/buttons/BackBTN.png"}, 
+    {id: "BackBTN", src:"../../Assets/images/buttons/BackBTN.png"},
+    {id: "Pie", src:"../../Assets/images/sprites/smallPie.png"}, 
     
     {id: "menuBG", src:"../../Assets/images/backgrounds/menuBG.png"},
+    {id: "BG", src:"../../Assets/images/backgrounds/BG.png"},
+    {id: "tutBG", src:"../../Assets/images/backgrounds/TutBG.png"},
+    
+    {id: "birdSprite", src:"../../Assets/images/sprites/BirdSprite.png"},
     
     { id: "themeSound", src: "../../Assets/music/oCanada.mp3" }  
 ];
@@ -51,6 +62,22 @@ function init() {
     createjs.Ticker.setFPS(config.Game.FPS);
     createjs.Ticker.on("tick", this.gameLoop, this);
 
+    let birdData = {
+        "images": [
+            assets.getResult("birdSprite")
+        ],
+
+        "frames": {width: 210, height: 210, count: 4, regX: 105, regY:210, spacing:0, margin:0},
+
+        "animations": {
+            "fly": {
+                "frames": [1,2,3,4,5,4,3,2,1], "speed": 0.1, next: false
+            }
+        }
+    }
+
+    bird = new createjs.SpriteSheet(birdData);
+    
     // Set initial scene to MENU scene and call changeScene().
     scene = config.Scene.MENU;
     changeScene();

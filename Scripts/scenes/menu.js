@@ -21,6 +21,11 @@ var scenes;
             this.addChild(this._bg);
             this._menuLabel = new objects.Label("Pie Baron", "70px Impact", "#00008B", config.Screen.CENTER_X, config.Screen.CENTER_Y - 150);
             this.addChild(this._menuLabel);
+            if (highScore == null) {
+                highScore = 0;
+            }
+            this._highScoreLabel = new objects.Label("Most Pies: " + highScore, "40px Impact", "#000000", config.Screen.CENTER_X + 360, config.Screen.CENTER_Y - 350);
+            this.addChild(this._highScoreLabel);
             // Add button to scene. Register for click callback function
             this._playButton = new objects.Button("PlayBTN", config.Screen.CENTER_X - 190, config.Screen.CENTER_Y - 100);
             this.addChild(this._playButton);

@@ -12,6 +12,7 @@ module scenes {
         private _playButton : objects.Button;
         private _tutButton : objects.Button;
         private _menuLabel : objects.Label;
+        private _highScoreLabel : objects.Label;
         private _bg: createjs.Bitmap;
         private _musicButton : objects.Button;
         private _isMusicPlaying : boolean;
@@ -30,6 +31,13 @@ module scenes {
             
             this._menuLabel = new objects.Label("Pie Baron", "70px Impact", "#00008B", config.Screen.CENTER_X, config.Screen.CENTER_Y - 150);
             this.addChild(this._menuLabel);
+            
+            if (highScore == null){
+                highScore = 0;
+            }
+            
+            this._highScoreLabel = new objects.Label("Most Pies: " + highScore, "40px Impact", "#000000", config.Screen.CENTER_X + 360, config.Screen.CENTER_Y - 350);
+            this.addChild(this._highScoreLabel);
 
             // Add button to scene. Register for click callback function
             this._playButton = new objects.Button("PlayBTN", config.Screen.CENTER_X - 190, config.Screen.CENTER_Y - 100);
